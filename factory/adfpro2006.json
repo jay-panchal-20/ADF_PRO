@@ -1,0 +1,15 @@
+{
+	"name": "adfpro2006",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c9e27719-ce0f-4933-830b-3f322765c667",
+		"tenantId": "7dff9c5e-1d93-4c8d-b29a-3e16d67ef29b"
+	}
+}
