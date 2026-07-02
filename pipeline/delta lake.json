@@ -5,6 +5,8 @@
 			{
 				"name": "Data flow",
 				"type": "ExecuteDataFlow",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -17,13 +19,23 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "delta flow",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"source": {
+								"p_container": "source",
+								"p_folder": "deltasource",
+								"p_file": "locations.csv"
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
 					},
-					"traceLevel": "Fine"
+					"traceLevel": "None",
+					"cacheSinks": {
+						"firstRowOnly": true
+					}
 				}
 			}
 		],

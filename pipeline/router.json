@@ -5,6 +5,8 @@
 			{
 				"name": "Get Metadata",
 				"type": "GetMetadata",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Validate",
@@ -42,6 +44,8 @@
 			{
 				"name": "ForEach",
 				"type": "ForEach",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Get Metadata",
@@ -60,6 +64,8 @@
 						{
 							"name": "SwitchFile",
 							"type": "Switch",
+							"state": "Inactive",
+							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
@@ -74,6 +80,8 @@
 											{
 												"name": "CopyCustomers",
 												"type": "Copy",
+												"state": "Inactive",
+												"onInactiveMarkAs": "Succeeded",
 												"dependsOn": [],
 												"policy": {
 													"timeout": "0.12:00:00",
@@ -153,6 +161,8 @@
 											{
 												"name": "CopyDrivers",
 												"type": "Copy",
+												"state": "Inactive",
+												"onInactiveMarkAs": "Succeeded",
 												"dependsOn": [],
 												"policy": {
 													"timeout": "0.12:00:00",
@@ -232,6 +242,8 @@
 											{
 												"name": "CopyTrips",
 												"type": "Copy",
+												"state": "Inactive",
+												"onInactiveMarkAs": "Succeeded",
 												"dependsOn": [],
 												"policy": {
 													"timeout": "0.12:00:00",
@@ -314,6 +326,8 @@
 			{
 				"name": "Validate",
 				"type": "Validation",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
@@ -333,6 +347,8 @@
 			{
 				"name": "Delete1",
 				"type": "Delete",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "ForEach",
